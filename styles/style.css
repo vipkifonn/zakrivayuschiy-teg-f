@@ -22,7 +22,7 @@
   background-color: var(--bg-color);
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: var(--font-weight-text);
+  font-variation-settings: 'wght' var(--font-weight-text);
   background-image: repeating-linear-gradient(
       to left,
       var(--rep-lin-gr-color) 0 2px,
@@ -150,7 +150,7 @@
 .card-title {
   font-size: 18px;
   line-height: 22px;
-  font-variation-settings: var(--font-weight-title);
+  font-variation-settings: 'wght' var(--font-weight-title);
   padding: 0 10px 5.5px;
 }
 
@@ -191,7 +191,7 @@
 } 
 
 .card-text {
-  font-variation-settings: var(--font-weight-text);
+  font-variation-settings: 'wght' var(--font-weight-text);
   font-size: 18px;
   display: grid;
   gap: 27px;
@@ -237,7 +237,7 @@
   width: 130px;
   font-size: 14px;
   line-height: 12.6px;
-  font-variation-settings: var(--font-weight-text);
+  font-variation-settings:'wght' var(--font-weight-text);
   border: 2px solid var(--accent-color);
 }
 
