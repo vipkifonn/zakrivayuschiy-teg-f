@@ -4,3 +4,51 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --main-font: "Inter-Variable";
+  --accent-font: "Press Start 2P";
+  --font-weight-text: 400;
+  --font-weight-title: 700;
+  --bg-color: #fff;
+  --accent-color: #000;
+  --rep-lin-gr-color: #d3d3d3;
+  --lin-gr-color-from: #e7e7e7;
+  --lin-gr-color-to: #1a1a1a;
+  --text-change-color: #fff;
+}
+/*.page .theme-light {
+  background-color: var(--bg-color);
+}*/
+
+:root.theme-dark {
+  --main-font: "Inter-Variable";
+  --accent-font: "Press Start 2P";
+  --font-weight-text: 465;
+  --font-weight-title: 785;
+  --bg-color: #000;
+  --accent-color: #00cc14;
+  --rep-lin-gr-color: #000;
+  --lin-gr-color-from: #007f0c;
+  --lin-gr-color-to: #004306;
+  --text-change-color: #00cc14;
+}
+
+/*.page .theme-dark {
+  background-color: var(--bg-color);
+}*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font: "Inter-Variable";
+    --accent-font: "Press Start 2P";
+    --font-weight-text: 465;
+    --font-weight-title: 785;
+    --bg-color: #000;
+    --accent-color: #00cc14;
+    --rep-lin-gr-color: #000;
+    --lin-gr-color-from: #007f0c;
+    --lin-gr-color-to: #004306;
+    --text-change-color: #00cc14;
+  }
+}
