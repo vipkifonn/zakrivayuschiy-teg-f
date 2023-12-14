@@ -22,7 +22,7 @@
   background-color: var(--bg-color);
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
-  font-weight: var(--font-weight-text);
+  font-variation-settings: var(--font-weight-text);
   background-image: repeating-linear-gradient(
       to left,
       var(--rep-lin-gr-color) 0 2px,
@@ -150,7 +150,7 @@
 .card-title {
   font-size: 18px;
   line-height: 22px;
-  font-weight: var(--font-weight-title);
+  font-variation-settings: var(--font-weight-title);
   padding: 0 10px 5.5px;
 }
 
@@ -182,8 +182,16 @@
   right: 0;
 }
 
+@supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+  .image-lable {
+      -webkit-text-stroke: 1px var(--bg-color);
+      text-stroke: 1px var(--bg-color);
+      text-shadow: var(--bg-color);
+  }
+} 
+
 .card-text {
-  font-weight: var(--font-weight-text);
+  font-variation-settings: var(--font-weight-text);
   font-size: 18px;
   display: grid;
   gap: 27px;
@@ -229,7 +237,7 @@
   width: 130px;
   font-size: 14px;
   line-height: 12.6px;
-  font-weight: var(--font-weight-text);
+  font-variation-settings: var(--font-weight-text);
   border: 2px solid var(--accent-color);
 }
 
@@ -239,11 +247,11 @@
 
 .button-save {
   display: grid;
-  grid-template-columns: min-content 1fr;
+  grid-template-columns: min-content max-content;
   padding: 15px 20px;
   justify-self: center;
   align-self: center;
-  width: clamp(306px, 21rem, 335px);
+  width: 21rem;
   background-color: var(--bg-color);
   outline: none;
   border: 2px solid var(--accent-color);
@@ -267,6 +275,7 @@
 
 .button-save-image {
   fill: var(--accent-color);
+  justify-self: center;
 }
 
 .button-save-text {
@@ -274,6 +283,7 @@
   color: var(--accent-color);
   font-size: 14px;
   align-self: center;
+  line-height: 12.60px;
 }
 .button-animation {
   position: relative;
@@ -460,22 +470,22 @@
   filter: sepia(100%);
 }
 
-.image-3 {
+.image-night-sky {
   filter: saturate(180%);
 }
 
-.image-4 {
+.image-hair {
   filter: blur(0.05rem) hue-rotate(-90deg) saturate(180%);
 }
 
-.image-5 {
+.image-mountain {
   filter: brightness(150%) grayscale(1);
 }
 
-.image-6 {
+.image-tree {
   filter: invert(1);
 }
 
-.image-7 {
+.image-man {
   filter: contrast(120%) saturate(120%) brightness(120%);
 }

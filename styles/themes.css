@@ -8,8 +8,8 @@
 :root.theme-light {
   --main-font: "Inter-Variable";
   --accent-font: "Press Start 2P";
-  --font-weight-text: 400;
-  --font-weight-title: 700;
+  --font-weight-text: "wght" 400;
+  --font-weight-title: "wght" 700;
   --bg-color: #fff;
   --accent-color: #000;
   --rep-lin-gr-color: #d3d3d3;
@@ -24,8 +24,8 @@
 :root.theme-dark {
   --main-font: "Inter-Variable";
   --accent-font: "Press Start 2P";
-  --font-weight-text: 465;
-  --font-weight-title: 785;
+  --font-weight-text: "wght" 465;
+  --font-weight-title: "wght" 785;
   --bg-color: #000;
   --accent-color: #00cc14;
   --rep-lin-gr-color: #000;
@@ -42,8 +42,8 @@
   :root {
     --main-font: "Inter-Variable";
     --accent-font: "Press Start 2P";
-    --font-weight-text: 465;
-    --font-weight-title: 785;
+    --font-weight-text: "wght" 465;
+    --font-weight-title: "wght" 785;
     --bg-color: #000;
     --accent-color: #00cc14;
     --rep-lin-gr-color: #000;
