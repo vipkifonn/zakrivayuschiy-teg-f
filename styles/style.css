@@ -402,7 +402,7 @@
   }
 }
 
-.dialog {
+.dialog:has([open]) {
   background-color: var(--bg-color);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
