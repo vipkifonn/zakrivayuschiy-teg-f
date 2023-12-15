@@ -63,7 +63,7 @@
 }
 
 .theme-menu {
-  padding: 25px 0 25px 10px;
+  padding: 25px 0 25px 15px;
   justify-self: center;
   font-size: 14px;
 }
@@ -136,8 +136,13 @@
 
 .main {
   display: grid;
-  padding: 102px 0 54px;
-  gap: 50px;
+  padding-top: 102px ;
+  gap: 50px
+}
+
+.cards-section {
+  display: grid;
+  gap: 53px;
 }
 
 .card {
@@ -254,7 +259,7 @@
 .button-save {
   display: grid;
   grid-template-columns: min-content max-content;
-  padding: 15px 20px;
+  padding: 14px 20px;
   justify-self: center;
   align-self: center;
   width: 21rem;
@@ -262,21 +267,6 @@
   outline: none;
   border: 2px solid var(--accent-color);
   gap: 8px;
-}
-
-@media (width <= 376px) {
-  .header,
-  .card {
-    width: 100%;
-  }
-
-  .header {
-    padding-top: 120px;
-  }
-
-  .card-image-contaier {
-    height: 23.5rem;
-  }
 }
 
 .container-svg {
@@ -331,6 +321,42 @@
   color: var(--text-change-color);
   z-index: 2;
   fill: var(--text-change-color);
+}
+
+@media (width <= 376px) {
+  .header,
+  .card {
+    width: 100%;
+  }
+
+  .header {
+    padding-top: 120px;
+  }
+  
+  .cards-section {
+    gap: 51px
+  }
+  
+  .card-title {
+    padding: 5.5px 10px 2px;
+  }
+
+  .card-image-contaier {
+    height: 23.5rem;
+
+  }
+
+  .button-save {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 16px;
+    width: 19.2rem;
+    gap: 6px;
+  }
+  .container-svg {
+    width: 28px;
+  }
 }
 
 .dialog[open] {
