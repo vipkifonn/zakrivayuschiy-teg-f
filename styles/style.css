@@ -16,6 +16,7 @@
 
 .page {
   display: grid;
+  width: 100%;
   padding: 102px 0;
   color: var(--accent-color);
   font-family: var(--main-font), sans-serif;
@@ -210,12 +211,14 @@
   font-variation-settings: "wght" var(--font-weight-text);
 }
 
-.like-button-card {
+.like-button-container {
+  position: relative;
   display: flex;
   justify-self: end;
   gap: 6px;
   width: min-content;
   padding: 0 25px 24px;
+  overflow: hidden;
   font-family: var(--accent-font), fantasy;
 }
 
@@ -224,12 +227,7 @@
   border: none;
   padding: 0;
   background-color: transparent;
-}
-
-.card__icon-button {
-  border: 2px solid transparent;
-  outline: none;
-  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
@@ -242,14 +240,12 @@
 }
 
 .button-like-text {
+  position: relative;
   display: block;
   width: 130px;
-  border: 2px solid var(--accent-color);
   padding: 12px 17px 10px;
   font-size: 14px;
   line-height: 12.6px;
-  background-color: transparent;
-  transition: 0.5s ease-in-out;
 }
 
 .button-save-container {
@@ -288,6 +284,9 @@
 }
 .button-animation {
   position: relative;
+  border: 2px solid var(--accent-color);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .button-animation:focus-visible {
@@ -295,32 +294,11 @@
   outline: none;
 }
 
-.button-animation::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--accent-color);
-  transition: 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.button-animation:hover::after {
-  content: "";
-  transform: scaleX(1);
-  cursor: pointer;
-}
-
-.button-animation:hover .button-animation-item {
-  position: relative;
-  z-index: 2;
-  color: var(--text-change-color);
-  fill: var(--text-change-color);
-  mix-blend-mode: difference;
+@media (376px < width <= 696px) {
+  .header,
+  .card {
+    width: 100%;
+  }
 }
 
 @media (width <= 376px) {
@@ -345,6 +323,10 @@
     height: 23.5rem;
   }
 
+  .image-lable {
+    padding: 25px 11px;
+  }
+
   .button-save {
     display: flex;
     flex-direction: column;
@@ -355,6 +337,10 @@
   }
   .container-svg {
     width: 28px;
+  }
+
+  .dialog[open] {
+    padding: 28px 38px;
   }
 }
 

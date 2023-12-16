@@ -22,6 +22,37 @@
   }
 }
 
+.card__icon-button {
+  border: 2px solid transparent;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.button-like-text {
+  transition: 0.5s ease-out;
+}
+
+.button-animation {
+  transition: 0.5s linear;
+}
+
+.button-animation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--text-change-color);
+  transition: translate 0.5s ease-in-out;
+  translate: -100% 0%;
+  mix-blend-mode: difference;
+}
+
+.button-animation:hover::after {
+  transition: translate 0.5s ease-in-out;
+  translate: 0% 0%;
+}
+
 .core {
   fill: var(--accent-color);
   filter: opacity(0);
@@ -55,7 +86,7 @@
 .heart:active .core {
   fill: var(--fill-color);
   filter: opacity(1);
-  transition: filter 0.3s 0s;
+  transition: filter 0.3s linear 0s;
 }
 
 .heart:active .main-body {
@@ -82,8 +113,8 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: heartbit 0.3s ease-in 0.1s alternate ;
   transform-origin: center;
+  animation: heartbit 0.3s ease-in 0.1s alternate;
 }
 
 .like-icon.is-liked .sparks {
