@@ -235,10 +235,10 @@
 }
 
 .card__icon-button {
+  margin-bottom: 2px;
   border: 2px solid transparent;
   outline: none;
   transition: 0.3s ease;
-  margin-bottom: 2px;
 }
 
 .button-like-text {
@@ -364,15 +364,13 @@
   }
 
   .like-button-container {
-    padding: 0 25px 22px;;
+    padding: 0 25px 22px;
   }
 
   .button-like-text {
     width: 128px;
     padding: 12px 17px 10px;
   }
-
-
 
   .button-save {
     display: flex;
@@ -397,11 +395,11 @@
   grid-template-rows: min-content min-content;
   gap: 30px 20px;
   width: clamp(341px, 355px, 357px);
+  margin-block-start: 24rem;
   border: 2px solid var(--accent-color);
+  padding: 25px 30px;
   color: var(--accent-color);
   background-color: var(--bg-color);
-  margin-block-start: 24rem;
-  padding: 25px 30px;
 }
 
 .dialog-title {
