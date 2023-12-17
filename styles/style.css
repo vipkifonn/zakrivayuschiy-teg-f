@@ -143,7 +143,7 @@
 
 .cards-section {
   display: grid;
-  gap: 53px;
+  gap: 50.5px;
 }
 
 .card {
@@ -172,7 +172,7 @@
 .card-image-contaier {
   position: relative;
   width: 100%;
-  height: 43.5rem;
+  height: 43.6rem;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
 }
@@ -215,7 +215,7 @@
   position: relative;
   display: flex;
   justify-self: end;
-  gap: 6px;
+  gap: 5px;
   width: min-content;
   padding: 0 25px 24px;
   overflow: hidden;
@@ -230,6 +230,41 @@
   cursor: pointer;
 }
 
+.card__like-button {
+  margin-block-end: 2px;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.button-like-text {
+  transition: 0.5s ease-out;
+}
+
+.button-animation {
+  transition: 0.5s linear;
+}
+
+.button-animation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--text-change-color);
+  transition: translate 0.5s ease-in-out;
+  translate: -100% 0%;
+  mix-blend-mode: difference;
+}
+
+.button-animation:hover::after {
+  transition: translate 0.5s ease-in-out;
+  translate: 0% 0%;
+}
+
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
 }
@@ -242,7 +277,7 @@
 .button-like-text {
   position: relative;
   display: block;
-  width: 130px;
+  width: 125px;
   padding: 12px 17px 10px;
   font-size: 14px;
   line-height: 12.6px;
@@ -294,7 +329,7 @@
   outline: none;
 }
 
-@media (376px < width <= 696px) {
+@media (376px < width <= 710px) {
   .header,
   .card {
     width: 100%;
@@ -327,6 +362,15 @@
     padding: 25px 11px;
   }
 
+  .like-button-container {
+    padding: 0 25px 24px;;
+  }
+
+  .button-like-text {
+    width: 130px;
+    padding: 12px 17px 10px;
+  }
+
   .button-save {
     display: flex;
     flex-direction: column;
@@ -349,10 +393,12 @@
   grid-template-columns: 39px 1fr;
   grid-template-rows: min-content min-content;
   gap: 30px 20px;
-  width: clamp(341px, 22.5rem, 357px);
+  width: clamp(341px, 355px, 357px);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   background-color: var(--bg-color);
+  margin-block-start: 24rem;
+  padding: 25px 30px;
 }
 
 .dialog-title {

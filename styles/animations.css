@@ -22,37 +22,6 @@
   }
 }
 
-.card__icon-button {
-  border: 2px solid transparent;
-  outline: none;
-  transition: 0.3s ease;
-}
-
-.button-like-text {
-  transition: 0.5s ease-out;
-}
-
-.button-animation {
-  transition: 0.5s linear;
-}
-
-.button-animation::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--text-change-color);
-  transition: translate 0.5s ease-in-out;
-  translate: -100% 0%;
-  mix-blend-mode: difference;
-}
-
-.button-animation:hover::after {
-  transition: translate 0.5s ease-in-out;
-  translate: 0% 0%;
-}
-
 .core {
   fill: var(--accent-color);
   filter: opacity(0);
